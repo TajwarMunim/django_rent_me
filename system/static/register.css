@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color:#454545;
+    color: #fff;
+    padding: 13px;
+    font-size: 55px;
+    text-decoration: none;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    text-align: center;
+    text-decoration: whitesmoke;
+    background-color: #454545;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+  }
+
+ .name:hover{
+    transform: scale(1.2);
+    transition: 2s ease-in-out;
+    color: #fff;
+  }
+
+  /* ---------template-------- */
+
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 70px;
+  }
+  
+  .card {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+  }
+  h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] 
+  input[type="phone"] 
+  input[type="NID"] 
+  input[type="occupation"] 
+  input[type="location"] 
+  {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover 
+  {
+    background-color: #45a049;
+  }

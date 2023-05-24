@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static "rent_post.css" %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>rent_post</title>
+</head>
+<body>
+    <header>
+        <!-- navbar -->
+        <nav>
+           <ul>
+             <li class="name"><img src="{% static 'logo.png'%}" alt="" width="9%"> Rent Me</li>
+           </ul>
+         </nav>
+         <!-- navbar end -->
+       </header>
+
+
+       <div class="container">
+        <div class="card">
+        <h2>Post Rent Listing</h2>
+        <form enctype="multipart/form-data" mathod="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="rent-type">Rent Type:</label>
+            <select id="rent-type" name="rent-type" required>
+              <option value="house">House</option>
+              <option value="room">Room</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+          </div>
+          <div class="form-group">
+            <label for="owner-name">Owner Name:</label>
+            <input type="text" id="owner-name" name="owner-name" required>
+          </div>
+          <div class="form-group">
+            <label for="owner-email">Owner Email:</label>
+            <input type="email" id="owner-email" name="owner-email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="desc" id="desc" name="desc" required>
+          </div>
+          <div class="form-group">
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+       </div>
+
+       
+
+      </div>
+
+      <div class="rental-posts">
+        <h2>MY RENTS</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Beautiful House for Rent</h3>
+            <p>Location: XYZ Street</p>
+            <p>Price: $$$</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div>
+              <a href="#" target="blank" class="contract_home">CANCEL<i
+                      class="fas fa-arrow-right"></i></a>
+
+          </div>
+
+          </div>
+        <div class="card-container">
+          <div class="card">
+            <h3>Beautiful House for Rent</h3>
+            <p>Location: XYZ Street</p>
+            <p>Price: $$$</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div>
+              <a href="#" target="blank" class="contract_home">CANCEL<i
+                      class="fas fa-arrow-right"></i></a>
+
+          </div>
+
+          </div>
+        </div>
+
+
+</body>
+</html>
