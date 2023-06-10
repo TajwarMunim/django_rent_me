@@ -58,14 +58,14 @@ def registerPage(request):
             email=request.POST['email']
             phone_no=request.POST['phoneNo']
             nid_no=request.POST['nid']
-            # occupation=request.POST['occupation']
+            occupation=request.POST['occupation']
             password=request.POST['password']
 
 
             try:
                 new_renter=Renter.objects.create(
                 fullname=fullname,username=username,email_id=email,
-                phone_no=phone_no,nid_no=nid_no
+                phone_no=phone_no,nid_no=nid_no,occupation=occupation
             )
                 new_owner.save()
                 getMember=Renter.objects.get(username=username)
@@ -92,4 +92,10 @@ def registerPage(request):
 def login(request):
     return render(request,'login.html')    
 def rent_Post(request):
-    return render(request,'rent_post.html')   
+    return render(request,'rent_post.html') 
+def rent_events(request):
+    return render(request,'rent_events.html')
+def admin_log(request):
+    return render(request,'admin_log.html')
+
+      

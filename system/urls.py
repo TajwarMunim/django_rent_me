@@ -8,5 +8,8 @@ urlpatterns=[
     path('signup',views.registerPage,name='register_page'),
     path('login',views.login,name='login'),
     path('rent_post',views.rent_Post,name='rent_post'),
+    path('rent_events',views.rent_events,name='rent_events'),
+    path('admin_log',views.admin_log,name="admin_log")
+    
 ]
 
