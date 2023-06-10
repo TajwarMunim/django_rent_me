@@ -130,9 +130,9 @@ label {
 .rental-posts {
   max-height: 400px;
   overflow-y: auto;
-  padding: 20px;
+  padding: 10px;
   background-color: #7b7a7a;
-  padding: 20px;
+  padding: 10px;
   
 }
 .rental-posts h2{
